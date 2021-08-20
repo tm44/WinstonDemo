@@ -1,0 +1,27 @@
+{
+  "name": "winstondemo",
+  "version": "1.0.0",
+  "description": "Demo project for Supplemental Topic presentation",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tm44/WinstonDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tm44/WinstonDemo/issues"
+  },
+  "homepage": "https://github.com/tm44/WinstonDemo#readme"
+}
