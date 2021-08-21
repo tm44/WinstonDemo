@@ -7,8 +7,8 @@ const productionLogger = () => {
         transports: [
             new winston.transports.MongoDB({
                 db: 'mongodb+srv://mike:d5E5Sb!A9biSEPv@cluster0.ogz5o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-                //level: "error",
-                collection: "DemoLog"
+                collection: "DemoLog",
+                options: { useUnifiedTopology: true, }
             })
         ]
     })
