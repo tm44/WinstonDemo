@@ -1,17 +1,15 @@
-const { createLogger, format, transports } = require("winston");
-const { combine, timestamp, label, printf } = format;
-
-const myCustomFormat = printf(({ level, message, timestamp }) => {
-    return `${timestamp} [${level}] ${message}`;
-})
+const winston = require("winston");
+require("winston-mongodb");
 
 const productionLogger = () => {
-    return createLogger({
+    return winston.createLogger({
         level: "info",
-        format: combine(timestamp({ format: "HH:mm:ss" }), myCustomFormat), //format.json(),
         transports: [
-            new transports.File({ filename: "error.log", level: "error"}),
-            new transports.File({ filename: "combined.log "})
+            new winston.transports.MongoDB({
+                db: 'mongodb+srv://mike:d5E5Sb!A9biSEPv@cluster0.ogz5o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+                //level: "error",
+                collection: "DemoLog"
+            })
         ]
     })
 }

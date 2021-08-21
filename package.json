@@ -4,6 +4,7 @@
   "description": "Demo project for Supplemental Topic presentation",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "winston": "^3.3.3",
     "winston-mongodb": "^5.0.7"
