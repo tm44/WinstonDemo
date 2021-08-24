@@ -1,6 +1,6 @@
 const winston = require("winston");
 
-const amazingDemo = () => {
+const amazingLogger = () => {
 
     return winston.createLogger({
         level: "debug",
@@ -18,11 +18,11 @@ const amazingDemo = () => {
                         winston.format.timestamp(),
                         winston.format.align(),
                         winston.format.printf(info => `${info.timestamp} [${info.level}] ${info.message}`)
-                      )
+                      ),
                 }),
 
         ]
     })
 }
 
-module.exports = amazingDemo;
+module.exports = amazingLogger;
