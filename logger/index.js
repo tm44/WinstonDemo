@@ -1,5 +1,5 @@
 const simpleDemoLogger = require("./simpleDemoLogger");
-const amazingLogger = require("./amazingDemoLogger");
+const amazingDemoLogger = require("./amazingDemoLogger");
 const productionLogger = require("./productionLogger");
 require("dotenv").config();
 
@@ -10,7 +10,7 @@ if (process.env.LOG_TYPE === "simple") {
 }
 
 else if (process.env.LOG_TYPE === "amazing") {
-    logger = amazingLogger();
+    logger = amazingDemoLogger();
 }
 
 else {

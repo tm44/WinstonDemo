@@ -1,11 +1,15 @@
 const winston = require("winston");
 require("winston-mongodb");
+require("dotenv").config();
+
+// See more on why process seems to hang when using the winston-mongodb transport:
+// https://github.com/winstonjs/winston-mongodb/issues/51
 
 const productionLogger = () => {
     return winston.createLogger({
         transports: [
             new winston.transports.MongoDB({
-                db: 'mongodb+srv://mike:d5E5Sb!A9biSEPv@cluster0.ogz5o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+                db: process.env.MONGODB,
                 collection: "DemoLog",
                 level: "error",
                 options: { 

@@ -1,6 +1,6 @@
 const winston = require("winston");
 
-const amazingLogger = () => {
+const amazingDemoLogger = () => {
 
     return winston.createLogger({
         level: "debug",
@@ -25,4 +25,4 @@ const amazingLogger = () => {
     })
 }
 
-module.exports = amazingLogger;
+module.exports = amazingDemoLogger;
